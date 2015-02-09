@@ -23,7 +23,7 @@ return array(
 		 'admin',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Wy9g3H7U',
+			'password'=>'password',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','91.208.153.1','::1'),
 		),
@@ -33,9 +33,9 @@ return array(
 	// application components
 	'components'=>array(
     'authManager' => array(
-    // Будем использовать менеджер авторизации
+    
     'class' => 'PhpAuthManager',
-    // Роль по умолчанию. Все, кто не админы, модераторы и юзеры — гости.
+   
     'defaultRoles' => array('guest'),
 ),
     
@@ -66,7 +66,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=play',
 			'emulatePrepare' => true,
 			'username' => 'play',
-			'password' => 'qxfEGSDH8EjxTPAs',
+			'password' => 'password',
 			'charset' => 'utf8',
 		),
 		
