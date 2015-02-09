@@ -26,10 +26,11 @@
 <div id="mainmenu" style="float:left;padding-top:15px">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-                array('label'=>'Add Server', 'url'=>array('/admin/server')),
-                array('label'=>'Add Port', 'url'=>array('/admin/port')),
+                array('label'=>'Clients', 'url'=>array('/admin/clients')),
+                array('label'=>'Servers/Add server', 'url'=>array('/admin/server')),
+                array('label'=>'Ports/Add Port', 'url'=>array('/admin/port')),
                 array('label'=>'Playlist', 'url'=>array('/admin/video')),
-                array('label'=>'Template', 'url'=>array('/admin/template')),
+                array('label'=>'Templates', 'url'=>array('/admin/template')),
                                 array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
@@ -41,10 +42,11 @@
 <div id="cssmenu" style="float:left;padding-top:20px;padding-bottom:250px">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Add Server', 'url'=>array('/admin/server')),
-                array('label'=>'Add Port', 'url'=>array('/admin/port')),
+                array('label'=>'Clients', 'url'=>array('/admin/clients')),     
+		array('label'=>'Servers/Add Server', 'url'=>array('/admin/server')),
+                array('label'=>'Ports/Add Port', 'url'=>array('/admin/port')),
                 array('label'=>'Playlist', 'url'=>array('/admin/video')),
-                array('label'=>'Template', 'url'=>array('/admin/template')),
+                array('label'=>'Templates', 'url'=>array('/admin/template')),
                                 array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
