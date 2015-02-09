@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.1.73, for redhat-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: play
 -- ------------------------------------------------------
--- Server version	5.5.37-0ubuntu0.12.04.1
+-- Server version	5.1.73
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +14,32 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tbl_clients`
+--
+
+DROP TABLE IF EXISTS `tbl_clients`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_clients` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `videos` varchar(255) DEFAULT NULL,
+  `comments` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_clients`
+--
+
+LOCK TABLES `tbl_clients` WRITE;
+/*!40000 ALTER TABLE `tbl_clients` DISABLE KEYS */;
+INSERT INTO `tbl_clients` VALUES (1,'David Blaine','','');
+/*!40000 ALTER TABLE `tbl_clients` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `tbl_playlist`
@@ -30,10 +56,10 @@ CREATE TABLE `tbl_playlist` (
   `app` varchar(255) DEFAULT NULL,
   `stream` varchar(255) DEFAULT NULL,
   `template` varchar(255) DEFAULT NULL,
-  `http` varchar(255) DEFAULT NULL,
+  `client` varchar(255) DEFAULT NULL,
   `rtmp` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +68,7 @@ CREATE TABLE `tbl_playlist` (
 
 LOCK TABLES `tbl_playlist` WRITE;
 /*!40000 ALTER TABLE `tbl_playlist` DISABLE KEYS */;
-INSERT INTO `tbl_playlist` VALUES (1,'nexcast','origin.hd-livestream.de',80,'redirect/live','nexcast','2','',''),(2,'enjoy_iframe','origin.hd-livestream.de',80,'redirect/live','Enjoy','1','',''),(3,'TirolTV_iframe','edge8.hd-livestream.de',1935,'live','TirolTV','1','','');
+INSERT INTO `tbl_playlist` VALUES (1,'nexcast','origin.hd-livestream.de',80,'redirect/live','nexcast','1','David Blaine',''),(2,'enjoy_iframe','origin.hd-livestream.de',80,'redirect/live','Enjoy','1','David Blaine',''),(3,'TirolTV_iframe','edge8.hd-livestream.de',1935,'live','TirolTV','1','',''),(9,'enjoy_ifram_v1','origin.hd-livestream.de',80,'redirect/live','Enjoy','1','David Blaine',NULL);
 /*!40000 ALTER TABLE `tbl_playlist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,4 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-06 14:16:30
+-- Dump completed on 2015-02-09 16:50:47
